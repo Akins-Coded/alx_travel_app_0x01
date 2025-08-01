@@ -42,4 +42,7 @@ urlpatterns = [
     # Optional: ReDoc
     # re_path(r'^redoc/$', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
     path('redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
+
+    # Include the listings app URLs
+    path('api/', include('listings.urls')),
 ]
